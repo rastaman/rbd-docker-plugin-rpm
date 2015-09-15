@@ -10,4 +10,9 @@ done
 [ -f /root/rpmbuild/SOURCES/0.1.9.tar.gz ] || \
 wget -O /root/rpmbuild/SOURCES/0.1.9.tar.gz https://github.com/yp-engineering/rbd-docker-plugin/archive/0.1.9.tar.gz
 wget -O /root/rpmbuild/SOURCES/rbd-docker-plugin_logrotate https://raw.githubusercontent.com/sheepkiller/rbd-docker-plugin/master/logrotate.d/rbd-docker-plugin_logrotate
+
+chown -v -R root:root /root/rpmbuild
+ls -la /root/rpmbuild/SPECS
+
+ls -la /root/
 rpmbuild -ba /root/rpmbuild/SPECS/rbd-docker-plugin.spec
